@@ -1,0 +1,269 @@
+/* Universal selector */
+
+* {
+    margin: 0;
+    padding: 0;
+}
+    
+
+
+body {
+    background: #67DAFB;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+@font-face {
+    font-family: YellowBanana;
+    src: url("../fonts/YellowBanana.otf");
+}
+
+#wrapper {
+    border: 5px solid #09193B;
+    border-radius: 25px;
+    width: 900px;
+    background: #ffffff;
+    /* Margin centering trick */
+    margin: 20px auto;
+    box-sizing:border-box;
+    overflow:hidden;
+}
+
+table.blueTable {
+  border: 1px solid #1C6EA4;
+  background-color: #EEEEEE;
+  width: 100%;
+  text-align: left;
+  border-collapse: collapse;
+}
+table.blueTable td, table.blueTable th {
+  border: 1px solid #AAAAAA;
+  padding: 3px 2px;
+}
+table.blueTable tbody td {
+  font-size: 13px;
+}
+table.blueTable tr:nth-child(even) {
+  background: #D0E4F5;
+}
+table.blueTable thead {
+  background: #1C6EA4;
+  background: -moz-linear-gradient(top, #5592bb 0%, #327cad 66%, #1C6EA4 100%);
+  background: -webkit-linear-gradient(top, #5592bb 0%, #327cad 66%, #1C6EA4 100%);
+  background: linear-gradient(to bottom, #5592bb 0%, #327cad 66%, #1C6EA4 100%);
+  border-bottom: 2px solid #444444;
+}
+table.blueTable thead th {
+  font-size: 15px;
+  font-weight: bold;
+  color: #FFFFFF;
+  border-left: 2px solid #D0E4F5;
+}
+table.blueTable thead th:first-child {
+  border-left: none;
+}
+
+table.blueTable tfoot td {
+  font-size: 14px;
+}
+table.blueTable tfoot .links {
+  text-align: right;
+}
+table.blueTable tfoot .links a{
+  display: inline-block;
+  background: #1C6EA4;
+  color: #FFFFFF;
+  padding: 2px 8px;
+  border-radius: 5px;
+}
+
+
+
+header {
+    display: grid;
+    grid-template-columns: 200px 2fr 1fr;
+    align-items: center;
+    justify-items: center;
+}
+
+header p {
+    grid-column: 2 / 4;
+}
+
+header img {
+    grid-row: 1 / 3;
+}
+
+#social {
+    grid-area: 1 / 3 / 2 / 4;
+}
+
+#social img {
+    width: 50px;
+}
+
+nav {
+    background-color: #fddd26;
+    border-top: 5px solid #09193B;
+    border-bottom: 5px solid #09193B;
+    
+}
+
+nav ul {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 0;
+}
+
+nav a {
+    text-decoration: none;
+    width: 100px;
+    display: flex;
+    justify-content: center;
+    font-family: YellowBanana;
+    color: #ffffff;
+    font-size: 25px;
+}
+
+nav li {
+    display: flex;
+    border: #ffffff solid 3px;
+    border-radius: 50%;
+    align-items: center;
+    height: 100px;
+    width: 100px;
+    background: #67DAFB;
+}
+
+nav li a {
+    border: #09193B solid 3px;
+    width: 100%;
+    height: 100%;
+    /* keep box model in width bounds */
+    box-sizing:border-box;
+    align-items: center;
+    border-radius: 50%;
+}
+
+/* pseudo class */
+nav li a:hover {
+    background: #ff7c15;
+    box-shadow: #ffffff 0px 0px 7px 14px;
+    color: #fddd26;
+    transform: rotate(-42deg);
+}
+
+section {
+    border: solid #09193B 5px;
+    min-height: 200px;
+    padding: 20px;
+}
+
+.bubble img {
+    height: 200px;
+}
+
+.bubble {
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+}
+
+main {
+    display: grid;
+    grid-template-columns: 4fr 1fr;
+}
+
+#ads {
+    padding: 10px;
+}
+
+#contact {
+    color: #09193B;
+    background-color: #FF7C15EE;
+    min-height: 200px;
+    padding: 10px;
+    border: 3px solid #fddd26;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+
+    position: fixed;
+    bottom: -314px;
+    right: 5px;
+    
+    transition: bottom 3s ease-in-out;
+    z-index: 5;
+
+}
+
+#contact:hover {
+  bottom: 0;
+  transition: bottom 2s ease-in-out;
+}
+
+footer {
+    height: 100px;
+    text-align: center;
+    align-content: center;
+    background: url("../images/bubblesbg.png");
+    color: white;
+}
+
+footer small {
+    text-shadow: 0px 0px 13px black;
+}
+
+@media (max-width: 1024px) {
+    #wrapper{
+        width: 100%;
+        border: unset;
+        border-radius: unset;
+        margin: 0;
+    }
+}
+
+@media (max-width: 745px) {
+    #wrapper{
+        display: block;
+        border: unset;
+        border-radius: unset;
+    }
+    header {
+        display: block;
+    }
+    header img {
+        display: none;
+    }
+
+    nav li{
+        display: block;
+        height: unset;
+        
+    }
+    main {
+        display: block;
+    }
+    .bubble {
+        display: block;
+        text-align: center;
+    }
+    .bubble img {
+        width: 60%;
+        height: unset;
+    }
+
+    #contact{
+        display: block;
+        position: unset;
+        width: 100%;
+        border: unset;
+        border-radius: unset;
+    }
+
+    #ads {
+        width: 100%;
+        text-align: center;
+    }
+    #ads img {
+        width: 45%;
+    }
+}

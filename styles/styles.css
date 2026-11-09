@@ -1,0 +1,175 @@
+h1, h2, h3, h4  {
+    font-family:papyrus
+}
+
+body {
+    background: #251F47;
+    font-family: Roboto;
+}
+
+nav {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    height: 150px;
+}
+#homenav {
+    grid-column: 1;
+    text-align: center;
+    color: #71B48D;
+    border: 5px solid black;
+}
+
+
+#wwrnav {
+    grid-column: 2;
+    text-align: center;
+    color: #71B48D;
+     border: 5px solid black;  
+}
+
+a:hover {
+    color: black;
+    background-color:aqua;
+    font-size: 250%; 
+}
+
+#icenav {
+    grid-column: 3;
+    text-align: center;
+    color: #71B48D;
+     border: 5px solid black;
+}
+
+#finalnav {
+    grid-column: 4;
+    text-align: center;
+    color: #71B48D;
+     border: 5px solid black;
+}
+
+h2 {
+    width: 50%;
+    text-align: center;
+    color: #ffffff;
+    border: 10px solid #86CB92;
+    border-radius: 45%;
+    margin: 0 auto;
+    
+}
+
+#logo {
+    width: 150px;
+    height: 150px;
+    
+}
+
+#wwr {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    
+    
+}
+
+
+
+#wwrimg {
+    grid-column: 1;
+    height:auto;
+    max-width: 100%;
+    
+    z-index: 1;
+    
+}
+
+#wwrmain {
+    grid-column: 1;
+    z-index: 1;
+    position: absolute;
+    align-self: center;
+}
+
+#wwrbackground {
+    grid-column: 1;
+    z-index: 0;
+    width: 100%;
+}
+
+#wwrimg img {
+    height: 100px
+}
+
+#wwrtext {
+    grid-column: 2;
+    height:100%;
+    width: 100%;
+   
+    
+}
+#wwrtext p {
+    font-size: 350%;
+}
+
+
+#ice {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+#iceimage {
+    grid-column: 1;
+
+}
+
+#icetext {
+    grid-column: 2;
+    font-size: 350%;
+}
+
+#aboutme {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+#aboutmeimage{
+    grid-column: 1;
+}
+
+#aboutmetext{
+    grid-column: 2;
+    font-size: 350%;
+}
+
+
+p {
+    color: #86CB92;
+}
+
+th {
+    color: #86CB92;
+}
+
+td {
+    color: #86CB92;
+}
+
+li {
+    color: #86CB92;
+}
+
+h4, h3 {
+     color: #86CB92;
+}
+
+footer {
+    background-color: #404E7C;
+    height: 150px;
+}
+
+label, input {
+    size: 250%;
+}
+
+h1 {
+    text-align: center;
+    color: #71B48D;
+}
